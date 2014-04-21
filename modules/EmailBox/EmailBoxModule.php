@@ -65,7 +65,11 @@ class EmailBoxModule extends CWebModule
             return false;
         }
     }
-
+    
+    /**
+     * Get email from DB and send message to email
+     * Use Service AmasonSES
+    **/
     public static function sendEmailFromBD()
     {
         $emailBox=EmailBox::model()->getAllEmailFromBD();

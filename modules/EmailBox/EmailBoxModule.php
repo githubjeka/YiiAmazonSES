@@ -2,11 +2,17 @@
 Yii::import('application.modules.EmailBox.vendors.*');
 require_once('AmazonSES.php');
 
+/**
+ * Module Yii1.x for Amason SES
+ **/
 class EmailBoxModule extends CWebModule
 {
+    // Config AmasonSES
     protected static $_accessKey='YOUR_ACCESS_KEY';
     protected static $_secretKey='YOUR_SECRET_KEY';
     protected static $_validateEmail='YOUR_VALIDATE_EMAIL';
+    
+    // count of second email that will be send 
     public static  $limitEmailSendSecond=5;
 
     public function init()
